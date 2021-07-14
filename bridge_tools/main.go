@@ -39,6 +39,12 @@ var (
 		Value: "./bridge_tools/conf/config_transactions.json",
 	}
 
+	methodFlag = cli.StringFlag{
+		Name:  "method",
+		Usage: "Bridge tool method",
+		Value: "",
+	}
+
 	logDirFlag = cli.StringFlag{
 		Name:  "logdir",
 		Usage: "log directory",
@@ -83,6 +89,11 @@ func setupApp() *cli.App {
 
 func startServer(ctx *cli.Context) {
 	cmd := ctx.GlobalInt(getFlagName(cmdFlag))
+	method := ctx.GlobalString("method")
+	if method != "" {
+		executeMethod(method, ctx)
+		return
+	}
 	if cmd == 1 {
 		configFile := ctx.GlobalString(getFlagName(configPathFlag))
 		config := conf.NewDeployConfig(configFile)
