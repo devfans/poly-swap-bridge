@@ -77,6 +77,7 @@ func setupApp() *cli.App {
 		logLevelFlag,
 		configPathFlag,
 		logDirFlag,
+		methodFlag,
 		cmdFlag,
 	}
 	app.Commands = []cli.Command{}
