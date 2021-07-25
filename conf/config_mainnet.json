@@ -84,6 +84,22 @@
       "ProxyContract":"020c15e7d08A8Ec7D35bCf3AC3CCbF0BBf2704e6"
     },
     {
+      "ChainName":"MATIC",
+      "ChainId":16,
+      "ListenSlot":1,
+      "Defer": 120,
+      "Nodes": [
+        {
+          "Url": "http://124.156.210.161:8545"
+        }
+      ],
+      "ExtendNodes": [
+      ],
+      "WrapperContract":"abc248c717fA0A9a78ff4Bf48A316c9e241A82C4",
+      "CCMContract":"abd7f7b89c5fd5d0aef06165f8173b1b83d7d5c9",
+      "ProxyContract":"28ff66a1b95d7cacf8eded2e658f768f44841212"
+    },
+    {
       "ChainName":"curve",
       "ChainId":10,
       "ListenSlot":1,
