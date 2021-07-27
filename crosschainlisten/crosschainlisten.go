@@ -82,6 +82,8 @@ func NewChainHandle(chainListenConfig *conf.ChainListenConfig) ChainHandle {
 		return ethereumlisten.NewEthereumChainListen(chainListenConfig)
 	} else if chainListenConfig.ChainId == basedef.O3_CROSSCHAIN_ID {
 		return o3listen.NewO3ChainListen(chainListenConfig)
+	} else if chainListenConfig.ChainId == basedef.MATIC_CROSSCHAIN_ID {
+		return ethereumlisten.NewEthereumChainListen(chainListenConfig)
 	} else {
 		return nil
 	}
